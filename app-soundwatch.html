@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Arn dBA Meter app page by Arn1ko Studio. Ambient sound level monitoring for Android.">
+    <meta name="theme-color" content="#12051f">
+    <title>Arn dBA Meter - Arn1ko Studio</title>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="aurora aurora-one" aria-hidden="true"></div>
+    <div class="grid-noise" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Arn1ko Studio home">
+        <span class="brand-mark">A1</span>
+        <span><strong>Arn1ko Studio</strong><small>Arn dBA Meter app page</small></span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html#apps">Apps</a>
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="app-page-shell">
+      <nav class="app-tabs" aria-label="Application pages">
+        <a href="app-arneq.html">ArnEQ</a>
+        <a href="app-net-scanner.html">Arn Net Scanner</a>
+        <a href="app-arnproxy.html">ArnProxy</a>
+        <a class="active" href="app-soundwatch.html">Arn dBA Meter</a>
+      </nav>
+
+      <section class="app-detail-hero">
+        <div>
+          <p class="eyebrow">Sound meter</p>
+          <h1>Arn dBA Meter</h1>
+          <p>
+            Android dBA meter for monitoring ambient sound levels and changes
+            in the acoustic environment with clear visual feedback.
+          </p>
+          <div class="detail-actions">
+            <span class="status-pill dev">In development</span>
+            <a class="button primary" href="privacy-policy.html">Privacy policy</a>
+          </div>
+        </div>
+        <img class="app-detail-icon" src="assets/images/soundwatch-icon.svg" alt="Arn dBA Meter icon">
+      </section>
+
+      <section class="detail-grid">
+        <article class="spec-card">
+          <h2>Purpose</h2>
+          <p>
+            Arn dBA Meter is built to show ambient sound level information in
+            dBA-style readings and help users notice changes in their acoustic
+            environment.
+          </p>
+        </article>
+        <article class="spec-card">
+          <h2>Expected features</h2>
+          <ul>
+            <li>Sound level monitoring</li>
+            <li>dBA-style visual feedback</li>
+            <li>Status and threshold-oriented UI</li>
+            <li>Foreground monitoring workflow</li>
+            <li>Designed for quick environmental awareness</li>
+          </ul>
+        </article>
+        <article class="spec-card">
+          <h2>Privacy</h2>
+          <p>
+            The app may use microphone access to estimate sound level. Audio is
+            intended to be processed locally for measurement and not uploaded by
+            the core app workflow.
+          </p>
+        </article>
+        <article class="spec-card">
+          <h2>Status</h2>
+          <p>
+            In development by Arn1ko Studio. Features and release details may
+            change before public distribution.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Arn1ko Studio.</p>
+      <a href="index.html">Back to home</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" role="img" aria-label="SoundWatch icon">
+  <circle cx="54" cy="54" r="52" fill="#050805"/>
+  <path d="M22 67a32 32 0 1 1 64 0" fill="none" stroke="#173217" stroke-width="12" stroke-linecap="round"/>
+  <path d="M22 67a32 32 0 0 1 52.8-31.3" fill="none" stroke="#00E676" stroke-width="12" stroke-linecap="round"/>
+  <path d="M54 52.5l25-21" fill="none" stroke="#FFB74D" stroke-width="5.5" stroke-linecap="round"/>
+  <circle cx="54" cy="54" r="5.5" fill="#112011"/>
+  <path d="M28 79h9V60h-9zm14 0h9V51h-9zm14 0h9V57h-9zm14 0h9V44h-9z" fill="#00E676"/>
+  <circle cx="54" cy="54" r="52" fill="none" stroke="#173017" stroke-width="2"/>
+</svg>

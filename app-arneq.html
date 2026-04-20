@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ArnEQ app page by Arn1ko Studio. Equalizer, bass boost, presets, and Android sound effects.">
+    <meta name="theme-color" content="#12051f">
+    <title>ArnEQ - Arn1ko Studio</title>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="aurora aurora-one" aria-hidden="true"></div>
+    <div class="aurora aurora-two" aria-hidden="true"></div>
+    <div class="grid-noise" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Arn1ko Studio home">
+        <span class="brand-mark">A1</span>
+        <span><strong>Arn1ko Studio</strong><small>ArnEQ app page</small></span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html#apps">Apps</a>
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="app-page-shell">
+      <nav class="app-tabs" aria-label="Application pages">
+        <a class="active" href="app-arneq.html">ArnEQ</a>
+        <a href="app-net-scanner.html">Arn Net Scanner</a>
+        <a href="app-arnproxy.html">ArnProxy</a>
+        <a href="app-soundwatch.html">Arn dBA Meter</a>
+      </nav>
+
+      <section class="app-detail-hero">
+        <div>
+          <p class="eyebrow">Sound utility</p>
+          <h1>ArnEQ</h1>
+          <p>
+            Equalizer, bass boost, sound effects, ready-made presets, background
+            mode, and quick widget controls for Android.
+          </p>
+          <div class="detail-actions">
+            <a class="button primary" href="privacy-policy.html">Privacy policy</a>
+            <a class="button ghost" href="index.html#showcase">View screenshots</a>
+          </div>
+        </div>
+        <img class="app-detail-icon" src="assets/images/arneq-icon.svg" alt="ArnEQ icon">
+      </section>
+
+      <section class="detail-grid">
+        <article class="spec-card">
+          <h2>Purpose</h2>
+          <p>
+            ArnEQ helps users tune everyday audio with simple presets and manual
+            equalizer controls. It is designed as a practical Android sound
+            utility, not a studio-grade DSP.
+          </p>
+        </article>
+        <article class="spec-card">
+          <h2>Core features</h2>
+          <ul>
+            <li>5-band equalizer</li>
+            <li>Flat, Hip-Hop, Rock, Pop, Jazz, Bass+, Vocal, and Lo-Fi presets</li>
+            <li>Bass Boost strength control</li>
+            <li>Surround, Normalize, and Reverb effects where supported</li>
+            <li>Background mode with persistent notification</li>
+            <li>Home screen widget for quick start and stop</li>
+          </ul>
+        </article>
+        <article class="spec-card">
+          <h2>Android notes</h2>
+          <p>
+            Some effects depend on the Android device, firmware, and audio
+            effect implementation. ArnEQ uses Android system audio effects and
+            applies them in best-effort mode.
+          </p>
+        </article>
+        <article class="spec-card">
+          <h2>Privacy</h2>
+          <p>
+            ArnEQ stores selected sound profile, EQ values, language, theme,
+            and effect toggles locally on the device. It does not use ads,
+            analytics, accounts, or cloud sync.
+          </p>
+        </article>
+      </section>
+
+      <section class="mini-gallery">
+        <img src="assets/images/arneq-effects.png" alt="ArnEQ sound effects screen">
+        <img src="assets/images/arneq-bass.png" alt="ArnEQ bass boost screen">
+        <img src="assets/images/arneq-presets.png" alt="ArnEQ presets screen">
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Arn1ko Studio.</p>
+      <a href="index.html">Back to home</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
