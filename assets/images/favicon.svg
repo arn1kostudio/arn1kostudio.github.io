@@ -1,22 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Arn1ko Studio mark">
   <defs>
-    <linearGradient id="g" x1="18" y1="16" x2="110" y2="114" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#38d5ff"/>
-      <stop offset=".45" stop-color="#a855f7"/>
-      <stop offset="1" stop-color="#ff4fd8"/>
+    <linearGradient id="plate" x1="18" y1="14" x2="112" y2="116" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1a102a"/>
+      <stop offset=".55" stop-color="#12091d"/>
+      <stop offset="1" stop-color="#07030b"/>
     </linearGradient>
-    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
-      <feGaussianBlur stdDeviation="6" result="blur"/>
+    <linearGradient id="mark" x1="28" y1="26" x2="100" y2="104" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f2e8ff"/>
+      <stop offset=".42" stop-color="#a855f7"/>
+      <stop offset="1" stop-color="#38d5ff"/>
+    </linearGradient>
+    <filter id="glow" x="-35%" y="-35%" width="170%" height="170%">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
   </defs>
-  <rect width="128" height="128" rx="34" fill="#07020d"/>
-  <rect x="10" y="10" width="108" height="108" rx="28" fill="url(#g)" opacity=".95" filter="url(#glow)"/>
-  <rect x="32" y="66" width="10" height="28" rx="5" fill="#fff"/>
-  <rect x="50" y="42" width="10" height="52" rx="5" fill="#fff"/>
-  <rect x="68" y="56" width="10" height="38" rx="5" fill="#fff"/>
-  <rect x="86" y="30" width="10" height="64" rx="5" fill="#fff"/>
+  <rect width="128" height="128" rx="30" fill="#05010a"/>
+  <rect x="10" y="10" width="108" height="108" rx="25" fill="url(#plate)" stroke="#35254c" stroke-width="2"/>
+  <g filter="url(#glow)">
+    <path d="M33 91 55 35c3.2-8.2 14.8-8.2 18 0l22 56" fill="none" stroke="url(#mark)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M47 69h34" fill="none" stroke="#f5efff" stroke-width="6" stroke-linecap="round" opacity=".92"/>
+  </g>
+  <path d="M36 99h56" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity=".18"/>
 </svg>
