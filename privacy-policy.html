@@ -1,159 +1,169 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Privacy Policy for Arn1ko Studio websites and apps.">
-    <meta name="theme-color" content="#12051f">
-    <title>Privacy Policy - Arn1ko Studio</title>
-    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy - ArnMesh</title>
+    <meta
+      name="description"
+      content="ArnMesh Privacy Policy for Windows, Android, coordinator, and relay fallback."
+    />
+    <meta name="theme-color" content="#0b1013" />
+    <link rel="icon" href="assets/brand/arnmesh-icon.png" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
-  <body class="policy-body">
-    <div class="ambient-field" aria-hidden="true"></div>
-    <div class="aurora aurora-one" aria-hidden="true"></div>
-    <div class="grid-noise" aria-hidden="true"></div>
+  <body class="policy-page">
+    <a class="skip-link" href="#policy-title">Skip to content</a>
 
-    <header class="site-header">
-      <a class="brand" href="index.html" aria-label="Arn1ko Studio home">
-        <span class="brand-mark" aria-hidden="true"><img src="assets/images/favicon.svg" alt=""></span>
-        <span>
-          <strong>Arn1ko Studio</strong>
-          <small>Privacy Policy</small>
-        </span>
+    <header class="site-header" data-elevate>
+      <a class="brand" href="index.html" aria-label="ArnMesh home">
+        <img src="assets/brand/arnmesh-icon.png" alt="" />
+        <span>ArnMesh</span>
       </a>
-      <nav class="nav" aria-label="Policy navigation">
-        <a href="index.html#apps">Apps</a>
-        <a href="index.html#contact">Contact</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html#uses">Use cases</a>
+        <a href="index.html#security">Security</a>
+        <a href="index.html#faq">FAQ</a>
       </nav>
     </header>
 
-    <main class="policy-shell">
-      <section class="policy-hero">
+    <main class="policy-main">
+      <section class="policy-intro reveal">
         <p class="eyebrow">Privacy Policy</p>
-        <h1>Arn1ko Studio Privacy Policy</h1>
+        <h1 id="policy-title">ArnMesh Privacy Policy</h1>
         <p>Effective date: April 27, 2026</p>
       </section>
 
-      <article class="policy-card">
+      <article class="policy-document reveal">
         <h2>Overview</h2>
         <p>
-          This Privacy Policy explains how Arn1ko Studio handles information for
-          this website and for apps published by Arn1ko Studio, including ArnEQ,
-          Arn Net Scanner, ArnProxy, and Arn dBA Meter. Product-specific pages
-          may add extra details when an app has its own network, account, or
-          device-management behavior.
-        </p>
-        <p>
-          ArnMesh has its own dedicated Privacy Policy because it uses device
-          pairing, mesh networking, a coordinator, and relay fallback. Please
-          review the
-          <a href="https://arn1kostudio.github.io/arnmesh/privacy-policy.html">ArnMesh Privacy Policy</a>
-          before using it.
+          ArnMesh is a private mesh networking app for Windows PCs and Android
+          devices. It is designed to connect approved devices into a local-style
+          private network for home access, trusted device sharing, and LAN-style
+          gaming. ArnMesh is not an anonymity VPN provider and is not intended
+          to route all internet traffic through the app.
         </p>
 
-        <h2>Our approach</h2>
+        <h2>Core privacy approach</h2>
         <p>
-          Arn1ko Studio apps are designed to keep data collection minimal. The
-          apps are not built around advertising profiles, tracking SDKs, or
-          selling user data. Most app settings and app state are stored locally
-          on your device.
+          ArnMesh tries to keep private data on your devices. Profiles, local
+          settings, private keys, and tunnel configuration are intended to be
+          stored locally. The coordinator and relay exist to help devices find
+          each other, approve pairing, and fall back when direct UDP is not
+          reachable.
         </p>
 
-        <h2>Information the website may process</h2>
+        <h2>Information stored on your device</h2>
         <p>
-          The Arn1ko Studio website is a static project site. It does not
-          include a user account system, custom analytics, advertising pixels,
-          or contact forms. If the site is hosted by a third-party platform
-          such as GitHub Pages, that platform may process standard technical
-          information such as IP address, browser type, request time, and pages
-          requested according to its own policies.
+          ArnMesh may store profiles, device names, device identifiers, mesh IP
+          addresses, .arnmesh hostnames, public keys, private tunnel keys,
+          management signing keys, invite tokens, pending requests, trusted
+          device permissions, app settings, service state, and diagnostic logs.
+          This data is needed for the app to remember your mesh networks and
+          reconnect after restarts or updates.
         </p>
 
-        <h2>Information apps may store locally</h2>
+        <h2>Information processed by the coordinator</h2>
         <p>
-          Apps may store local settings such as selected modes, app preferences,
-          saved profiles, interface language, theme, feature toggles, and recent
-          app state. This information is normally kept on the device and can be
-          removed by clearing app data or uninstalling the app.
+          When coordinator support is enabled, ArnMesh may send technical
+          metadata required for pairing, discovery, approvals, online status,
+          and relay fallback. This may include network/profile identifiers,
+          device identifiers, device names, platform type, public key
+          fingerprints, WireGuard public keys, mesh IP addresses, hostnames,
+          invite or approval state, trusted-device permissions, endpoint
+          candidates, public IP/port information visible to the server, last
+          seen times, and relay availability.
+        </p>
+        <p>
+          The coordinator should not receive your private WireGuard keys or
+          management signing private keys. Public keys and fingerprints may be
+          shared because other approved devices need them to establish secure
+          connections and verify management actions.
         </p>
 
-        <h2>App-specific notes</h2>
+        <h2>Relay fallback</h2>
         <p>
-          ArnEQ may store sound presets, equalizer values, bass boost strength,
-          effect toggles, language, theme, and background mode state locally. It
-          uses Android audio and notification features to provide sound effects
-          and background controls.
+          ArnMesh prefers direct UDP connections. If direct connectivity is not
+          available, relay fallback can forward encrypted tunnel packets between
+          approved devices. The relay is designed to be blind to decrypted
+          payloads, but it may still process technical metadata such as source
+          and destination endpoints, timing, packet sizes, connection state, and
+          traffic volume. The relay should not need private keys to operate.
         </p>
+
+        <h2>Traffic routing</h2>
         <p>
-          Arn Net Scanner may process local network information such as device
-          addresses, hostnames, and scan results so it can show devices on the
-          local network. The scanning workflow is intended to run locally on the
-          device.
-        </p>
-        <p>
-          ArnProxy may store proxy profile settings locally. If you use a proxy
-          server, the proxy provider or server operator may be able to see
-          connection metadata or traffic depending on the protocol and
-          encryption used. Arn1ko Studio does not control third-party proxy
-          services configured by the user.
-        </p>
-        <p>
-          Arn dBA Meter may use microphone access to estimate ambient sound
-          levels. Audio is intended to be processed locally for measurement and
-          not uploaded by the core app workflow.
+          ArnMesh is intended to route traffic for mesh devices, such as
+          100.90.x.x addresses and mesh hostnames. It is not designed to become
+          a full internet VPN by default. Your normal internet traffic should
+          continue to use your regular network unless you change system routing
+          or app settings outside the intended mesh workflow.
         </p>
 
         <h2>Permissions</h2>
         <p>
-          Apps may request permissions only when needed for their features. For
-          example, ArnEQ may request audio and notification-related permissions,
-          Arn Net Scanner may require network access, ArnProxy may use network
-          access, and Arn dBA Meter may request microphone access for sound
-          level measurement.
+          The Windows app may require administrator permission to install its
+          local service, tunnel driver usage, firewall rules, and uninstall
+          entry. The Android app may use Android VPN Service permission for the
+          mesh tunnel and may request camera access when QR code scanning is
+          used. Notifications may be used for status or background operation
+          when supported by the platform.
         </p>
 
-        <h2>Downloads and external services</h2>
+        <h2>Downloads and updates</h2>
         <p>
-          The website may link to external download pages, GitHub Releases, app
-          stores, social pages, or support email. Those services are operated by
-          third parties and may process data according to their own privacy
-          policies. Always download apps from official Arn1ko Studio links to
-          reduce the risk of modified files.
+          ArnMesh for Windows and Android may be distributed through GitHub
+          Releases or other official Arn1ko Studio links. Download platforms,
+          browsers, operating systems, hosting providers, and app stores may
+          process technical download and security-check information according
+          to their own policies.
         </p>
 
         <h2>Data sharing</h2>
         <p>
-          Arn1ko Studio does not sell personal data. The apps do not share
-          personal data with the developer for advertising or analytics
-          purposes. Data may still be processed by operating systems, hosting
-          providers, app stores, GitHub, email providers, or other third-party
-          services you use while downloading, installing, or contacting support.
+          ArnMesh does not sell personal data and is not built around
+          advertising analytics. Technical data may be processed by services
+          required to operate the website, downloads, coordinator, relay, VPS
+          hosting, email support, operating systems, app stores, and GitHub.
+          If you invite another device, that approved device may receive mesh
+          metadata needed to connect to the profile.
         </p>
 
-        <h2>Security and user responsibility</h2>
+        <h2>Security and responsibility</h2>
         <p>
-          Arn1ko Studio aims to avoid unnecessary data collection and to keep
-          app behavior transparent. However, no software, device, network, or
-          download channel can be guaranteed to be completely risk-free. To the
-          maximum extent permitted by law, Arn1ko Studio is not responsible for
-          data loss, disclosure, compromise, or damage caused by user
-          configuration, third-party services, device malware, unofficial or
-          modified builds, shared files, insecure networks, operating system
-          behavior, or events outside Arn1ko Studio's control.
+          ArnMesh uses encryption and approval flows to reduce risk, but no
+          network tool can guarantee perfect protection. You are responsible for
+          which devices you invite, which profiles you share, how you protect
+          your devices, and whether you install files from official sources.
+          To the maximum extent permitted by law, Arn1ko Studio is not
+          responsible for data loss, disclosure, compromise, unauthorized access,
+          or damage caused by user configuration, trusted or compromised
+          devices, copied invite codes, third-party hosting, network operators,
+          device malware, operating system behavior, unofficial or modified
+          builds, or events outside Arn1ko Studio's control.
+        </p>
+
+        <h2>Deleting data</h2>
+        <p>
+          You can remove local ArnMesh data by deleting profiles, resetting the
+          device in the app when available, clearing app data on Android, or
+          uninstalling ArnMesh. Some coordinator or relay metadata may remain in
+          server logs for operational, abuse-prevention, troubleshooting, or
+          security purposes for a limited time.
         </p>
 
         <h2>Children</h2>
         <p>
-          Arn1ko Studio apps are general utility apps and are not designed to
+          ArnMesh is a technical networking utility and is not designed to
           knowingly collect personal information from children.
         </p>
 
         <h2>Changes to this policy</h2>
         <p>
-          This policy may be updated when app features, permissions, hosting, or
-          distribution requirements change. The effective date at the top of
-          this page shows the latest version.
+          This policy may be updated when ArnMesh features, coordinator
+          behavior, relay behavior, permissions, distribution, or hosting
+          changes. The effective date at the top of this page shows the latest
+          version.
         </p>
 
         <h2>Contact</h2>
@@ -165,10 +175,19 @@
     </main>
 
     <footer class="site-footer">
-      <p>&copy; <span id="year"></span> Arn1ko Studio.</p>
-      <a href="index.html">Home</a>
+      <div class="footer-inner">
+        <a class="brand" href="index.html" aria-label="ArnMesh home">
+          <img src="assets/brand/arnmesh-icon.png" alt="" />
+          <span>ArnMesh</span>
+        </a>
+        <p>Private mesh networking for trusted devices.</p>
+        <a class="github-link" href="index.html">
+          <span>Home</span>
+        </a>
+      </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="assets/js/site.js"></script>
   </body>
 </html>
