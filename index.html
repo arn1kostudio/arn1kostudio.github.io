@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Arn1ko Studio creates Android utilities for sound, network tools, proxy workflows, and sound level monitoring.">
+    <meta name="description" content="Arn1ko Studio creates Android utilities, private networking tools, proxy workflows, and sound apps.">
     <meta name="theme-color" content="#12051f">
     <meta property="og:title" content="Arn1ko Studio">
-    <meta property="og:description" content="Independent Android app studio focused on useful, privacy-aware mobile tools.">
+    <meta property="og:description" content="Independent software studio focused on useful, privacy-aware apps and networking tools.">
     <meta property="og:type" content="website">
     <title>Arn1ko Studio</title>
     <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
@@ -15,6 +15,7 @@
   <body>
     <div class="aurora aurora-one" aria-hidden="true"></div>
     <div class="aurora aurora-two" aria-hidden="true"></div>
+    <div class="ambient-field" aria-hidden="true"></div>
     <div class="grid-noise" aria-hidden="true"></div>
 
     <header class="site-header">
@@ -22,11 +23,11 @@
         <span class="brand-mark">A1</span>
         <span>
           <strong>Arn1ko Studio</strong>
-          <small>Android apps and tools</small>
+          <small>Apps and network tools</small>
         </span>
       </a>
       <nav class="nav" aria-label="Main navigation">
-        <a href="#apps">Apps</a>
+        <a href="#apps">Projects</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -35,21 +36,21 @@
     <main id="top">
       <section class="hero section-shell">
         <div class="hero-copy">
-          <p class="eyebrow">Independent Android development</p>
-          <h1>Neon-grade Android utilities by Arn1ko Studio.</h1>
+          <p class="eyebrow">Independent software studio</p>
+          <h1>Neon-grade utilities by Arn1ko Studio.</h1>
           <p class="hero-text">
-            We build focused mobile tools for sound, local network discovery,
-            proxy workflows, and acoustic monitoring. Simple interfaces,
-            practical features, and privacy-aware design.
+            We build focused tools for private mesh networking, sound tuning,
+            local network discovery, proxy workflows, and acoustic monitoring.
+            Simple interfaces, practical features, and privacy-aware design.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#apps">Explore apps</a>
+            <a class="button primary" href="#apps">Explore projects</a>
             <a class="button ghost" href="privacy-policy.html">Privacy policy</a>
           </div>
           <dl class="quick-stats" aria-label="Studio highlights">
             <div>
-              <dt>4</dt>
-              <dd>app detail pages</dd>
+              <dt>5</dt>
+              <dd>active projects</dd>
             </div>
             <div>
               <dt>0</dt>
@@ -68,16 +69,23 @@
               <div class="deck-mark">A1</div>
               <div class="deck-title">
                 <span>Arn1ko Studio</span>
-                <strong>Android utilities</strong>
+              <strong>Studio projects</strong>
               </div>
             </div>
 
             <p>
-              A focused app lineup for sound tuning, network scanning, proxy
-              workflows, and ambient sound monitoring.
+              A focused lineup for private mesh access, sound tuning, network
+              scanning, proxy workflows, and ambient sound monitoring.
             </p>
 
             <div class="deck-apps">
+              <a class="deck-app deck-app-wide" href="https://arn1kostudio.github.io/arnmesh/">
+                <span class="deck-icon deck-image">
+                  <img src="assets/images/arnmesh-icon.png" alt="" aria-hidden="true">
+                </span>
+                <strong>ArnMesh</strong>
+                <small>Private mesh</small>
+              </a>
               <a class="deck-app" href="app-arneq.html">
                 <span class="deck-icon deck-image">
                   <img src="assets/images/arneq-icon.svg" alt="" aria-hidden="true">
@@ -113,16 +121,31 @@
 
       <section id="apps" class="section-shell">
         <div class="section-heading">
-          <p class="eyebrow">App portfolio</p>
+          <p class="eyebrow">Project portfolio</p>
           <h2>Useful tools, each with a clear purpose.</h2>
           <p>
-            The apps below are created and maintained by Arn1ko Studio. Some
+            The projects below are created and maintained by Arn1ko Studio. Some
             projects are in active development and may be updated before public
             release.
           </p>
         </div>
 
         <div class="app-grid">
+          <article class="app-card featured-card mesh-card">
+            <img class="app-icon" src="assets/images/arnmesh-icon.png" alt="ArnMesh app icon">
+            <div class="app-content">
+              <p class="status-pill live">Windows + Android</p>
+              <h3>ArnMesh</h3>
+              <p>Private mesh networking for your own devices and trusted friends, with direct UDP and encrypted relay fallback.</p>
+              <ul>
+                <li>Home access and LAN-style gaming</li>
+                <li>Owner approval for new devices</li>
+                <li>Stable 100.90.x.x mesh addresses</li>
+              </ul>
+              <a class="app-detail-link" href="https://arn1kostudio.github.io/arnmesh/">Open ArnMesh site</a>
+            </div>
+          </article>
+
           <article class="app-card featured-card">
             <img class="app-icon" src="assets/images/arneq-icon.svg" alt="ArnEQ app icon">
             <div class="app-content">
@@ -208,8 +231,8 @@
           <p class="eyebrow">About the studio</p>
           <h2>Small studio, practical Android software.</h2>
           <p>
-            Arn1ko Studio is an independent Android app developer profile. The
-            goal is to create clear, useful mobile utilities that solve one
+            Arn1ko Studio is an independent software developer profile. The
+            goal is to create clear, useful utilities that solve one
             problem well and stay understandable for regular users.
           </p>
         </div>
@@ -237,7 +260,7 @@
           <p class="eyebrow">Contact</p>
           <h2>Support and developer contact.</h2>
           <p>
-            For app support, Play Console verification, or privacy questions,
+            For app support, release verification, or privacy questions,
             contact Arn1ko Studio by email.
           </p>
         </div>
@@ -250,7 +273,7 @@
     </main>
 
     <footer class="site-footer">
-      <p>&copy; <span id="year"></span> Arn1ko Studio. Android apps by an independent developer.</p>
+        <p>&copy; <span id="year"></span> Arn1ko Studio. Apps and tools by an independent developer.</p>
       <a href="#top">Back to top</a>
     </footer>
 

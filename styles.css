@@ -81,11 +81,26 @@ a {
 }
 
 .aurora,
+.ambient-field,
 .grid-noise {
   pointer-events: none;
   position: fixed;
   inset: auto;
   z-index: -2;
+}
+
+.ambient-field {
+  inset: -18vmax;
+  z-index: -4;
+  opacity: 0.72;
+  filter: blur(18px) saturate(1.14);
+  background:
+    radial-gradient(34rem 24rem at 14% 28%, rgba(168, 85, 247, 0.28), transparent 66%),
+    radial-gradient(30rem 22rem at 78% 18%, rgba(124, 58, 237, 0.22), transparent 68%),
+    radial-gradient(36rem 26rem at 58% 84%, rgba(255, 79, 216, 0.18), transparent 70%),
+    radial-gradient(26rem 20rem at 88% 74%, rgba(86, 34, 180, 0.24), transparent 72%);
+  transform: translate3d(0, 0, 0) scale(1.02);
+  animation: ambient-shift 22s ease-in-out infinite alternate;
 }
 
 .aurora {
@@ -469,6 +484,10 @@ h3 {
   outline: none;
 }
 
+.deck-app-wide {
+  grid-column: 1 / -1;
+}
+
 .deck-icon {
   grid-area: icon;
   display: grid;
@@ -551,6 +570,13 @@ h3 {
   background:
     radial-gradient(circle at 22% 18%, rgba(56, 213, 255, 0.18), transparent 25rem),
     radial-gradient(circle at 78% 80%, rgba(255, 79, 216, 0.20), transparent 24rem),
+    var(--panel-strong);
+}
+
+.mesh-card {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(119, 242, 208, 0.13), transparent 22rem),
+    radial-gradient(circle at 78% 76%, rgba(168, 85, 247, 0.22), transparent 26rem),
     var(--panel-strong);
 }
 
@@ -964,6 +990,18 @@ h3 {
   to { transform: translate3d(4rem, 3rem, 0) scale(1.12); }
 }
 
+@keyframes ambient-shift {
+  0% {
+    transform: translate3d(-2rem, -1rem, 0) scale(1.02) rotate(0deg);
+  }
+  45% {
+    transform: translate3d(2.5rem, 1.5rem, 0) scale(1.08) rotate(5deg);
+  }
+  100% {
+    transform: translate3d(0.5rem, 3rem, 0) scale(1.04) rotate(-4deg);
+  }
+}
+
 @media (max-width: 1080px) {
   .site-header,
   .hero,
@@ -1170,9 +1208,12 @@ h3 {
   *,
   *::before,
   *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .aurora,
+  .ambient-field {
+    animation-duration: 42s !important;
   }
 }
