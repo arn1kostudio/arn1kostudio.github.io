@@ -39,8 +39,17 @@
       <article class="policy-card">
         <h2>Overview</h2>
         <p>
-          ArnEQ is an Android app by Arn1ko Studio that lets users manage
-          equalizer presets and sound effect settings on their device.
+          ArnEQ is an Android audio utility by Arn1ko Studio. It lets users
+          manage equalizer presets, bass boost, supported sound effects,
+          volume controls, background mode, and a home screen widget on their
+          device.
+        </p>
+
+        <h2>Single purpose</h2>
+        <p>
+          ArnEQ's purpose is to help users adjust and control audio on their
+          Android device. The app is not designed to collect personal profiles,
+          monitor user activity, or provide unrelated services.
         </p>
 
         <h2>Data collection</h2>
@@ -49,46 +58,132 @@
           the developer or third parties.
         </p>
         <p>
-          The app does not use analytics SDKs, advertising SDKs, crash
-          reporting SDKs, user accounts, or cloud sync.
+          The current release does not use analytics SDKs, advertising SDKs,
+          crash reporting SDKs, user accounts, cloud sync, or a custom backend
+          for user data.
         </p>
 
         <h2>Data stored on the device</h2>
         <p>
-          ArnEQ stores settings locally on the user's device using Android
-          SharedPreferences, including the selected sound profile, equalizer
-          band values, app theme, app language, effect toggles, and current app
-          state.
+          ArnEQ stores app settings locally on the user's device using Android
+          SharedPreferences. This may include:
+        </p>
+        <ul>
+          <li>Selected sound profile and equalizer band values.</li>
+          <li>Bass boost strength and sound effect toggles.</li>
+          <li>App language, theme, and current app state.</li>
+          <li>Background mode and service state needed for app controls.</li>
+          <li>An optional cached update configuration, if that feature is enabled for a build.</li>
+        </ul>
+        <p>
+          This information is kept on the device and is not sent to Arn1ko
+          Studio. Users can remove it by clearing the app's data or uninstalling
+          the app.
+        </p>
+
+        <h2>Audio processing</h2>
+        <p>
+          ArnEQ applies supported Android audio and system volume settings
+          locally on the device. The app does not record microphone input,
+          upload audio streams, or send processed audio to Arn1ko Studio.
         </p>
         <p>
-          This data stays on the device and is not sent to external servers.
+          The availability and behavior of individual effects may vary by
+          device manufacturer, Android version, firmware, and system audio
+          implementation.
         </p>
 
         <h2>Permissions used</h2>
         <ul>
-          <li><code>android.permission.MODIFY_AUDIO_SETTINGS</code> for applying volume and audio effect settings.</li>
-          <li><code>android.permission.POST_NOTIFICATIONS</code> for showing the foreground service notification when background mode is enabled.</li>
-          <li><code>android.permission.FOREGROUND_SERVICE</code> and <code>android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK</code> for keeping the sound profile active in background mode.</li>
+          <li><code>android.permission.MODIFY_AUDIO_SETTINGS</code> to apply volume and audio effect settings.</li>
+          <li><code>android.permission.POST_NOTIFICATIONS</code> to show the foreground service notification when background mode is enabled.</li>
+          <li><code>android.permission.FOREGROUND_SERVICE</code> to support the foreground service used by background mode.</li>
+          <li><code>android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK</code> to identify the foreground service's media playback purpose on supported Android versions.</li>
+          <li><code>android.permission.INTERNET</code> only for an optional remote update configuration when that feature is configured for a build.</li>
         </ul>
+
+        <h2>Background mode and widget</h2>
+        <p>
+          When the user enables background mode, ArnEQ may run a media playback
+          foreground service and display a persistent notification so the active
+          sound profile can remain available while the app is in the background.
+          The home screen widget provides quick start and stop controls.
+        </p>
+        <p>
+          Users can disable background mode at any time. The notification and
+          service are not used to collect personal data.
+        </p>
+
+        <h2>Optional update checks and external links</h2>
+        <p>
+          A build may be configured to request a small remote JSON document
+          containing version and update instructions. This feature is disabled
+          when no update configuration URL is supplied. The update document is
+          not intended to contain personal data, and a copy may be cached
+          locally so the app can evaluate a required update.
+        </p>
+        <p>
+          If an update is required, ArnEQ may open Google Play or another URL
+          provided by the update configuration when the user chooses the update
+          action. Those external services are operated under their own policies.
+        </p>
 
         <h2>Third-party services</h2>
         <p>
-          ArnEQ does not currently connect to third-party servers or APIs for
-          user data processing.
+          ArnEQ does not currently connect to third-party services for user data
+          processing. Android system services, Google Play, device manufacturers,
+          hosting providers, or external pages opened by the user may process
+          technical information under their own privacy policies.
+        </p>
+
+        <h2>Advertising, analytics, and accounts</h2>
+        <p>
+          The current release contains no advertising SDK, analytics SDK, crash
+          reporting SDK, sign-in flow, user account, or cloud synchronization.
+          If advertising, analytics, accounts, or other data-processing services
+          are added in a future release, this policy and the Google Play Data
+          safety declaration will be updated before that release.
+        </p>
+
+        <h2>Data sharing</h2>
+        <p>
+          Arn1ko Studio does not sell, rent, or share ArnEQ user data for
+          advertising, analytics, profiling, or unrelated purposes. The app's
+          local settings and audio state are not transmitted to the developer.
+        </p>
+
+        <h2>Data deletion and user controls</h2>
+        <p>
+          Users can change or reset settings inside the app, disable background
+          mode, clear the app's data in Android settings, or uninstall ArnEQ.
+          Clearing app data or uninstalling the app removes locally stored ArnEQ
+          settings. The current release does not maintain a user account or
+          server-side personal-data profile that requires an account deletion
+          request.
+        </p>
+
+        <h2>Security and device responsibility</h2>
+        <p>
+          ArnEQ is designed to keep its settings and audio processing on the
+          device and to avoid unnecessary data collection. No software, device,
+          network, or download channel can be guaranteed to be completely
+          risk-free. Users should keep Android, Google Play, and their device
+          security software up to date and install ArnEQ from an official
+          source.
         </p>
 
         <h2>Children's privacy</h2>
         <p>
-          ArnEQ is a utility app and does not knowingly collect personal
-          information from children.
+          ArnEQ is a general-purpose utility app and is not designed to
+          knowingly collect personal information from children.
         </p>
 
-        <h2>User controls</h2>
-        <ul>
-          <li>Users can change or reset app settings inside the app.</li>
-          <li>Users can disable background mode at any time.</li>
-          <li>Users can uninstall the app to remove locally stored app data.</li>
-        </ul>
+        <h2>Changes to this policy</h2>
+        <p>
+          This policy may be updated when ArnEQ features, permissions, update
+          behavior, hosting, or Google Play requirements change. The effective
+          date at the top of this page shows the latest version.
+        </p>
 
         <h2>Contact</h2>
         <p>
