@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ArnSip is a simple Android SIP voice calling app with multiple accounts and local data storage.">
+    <meta name="theme-color" content="#12051f">
+    <title>ArnSip - Arn1ko Studio</title>
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="aurora aurora-one" aria-hidden="true"></div>
+    <div class="aurora aurora-two" aria-hidden="true"></div>
+    <div class="grid-noise" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Arn1ko Studio home">
+        <span class="brand-mark" aria-hidden="true"><img src="assets/images/favicon.svg" alt=""></span>
+        <span><strong>Arn1ko Studio</strong><small>ArnSip app page</small></span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html#apps">Apps</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="app-page-shell">
+      <nav class="app-tabs" aria-label="Application pages">
+        <a class="active" href="app-arnsip.html">ArnSip</a>
+        <a href="app-arneq.html">ArnEQ</a>
+        <a href="app-net-scanner.html">Arn Net Scanner</a>
+        <a href="app-arnproxy.html">ArnProxy</a>
+        <a href="app-soundwatch.html">Arn dBA Meter</a>
+      </nav>
+
+      <section class="app-detail-hero">
+        <div>
+          <p class="eyebrow">SIP voice calling</p>
+          <h1>ArnSip</h1>
+          <p>Simple SIP voice calls with multiple accounts and local data storage.</p>
+          <div class="detail-actions">
+            <span class="status-pill live">Ready for release</span>
+            <a class="button ghost" href="arnsip-privacy.html">Privacy policy</a>
+          </div>
+        </div>
+        <img class="app-detail-icon" src="assets/images/arnsip-icon.svg" alt="ArnSip icon">
+      </section>
+
+      <section class="detail-grid">
+        <article class="spec-card">
+          <h2>About ArnSip</h2>
+          <p>
+            ArnSip is a convenient SIP application for voice calls on Android.
+            Connect an account from your SIP provider to make and receive calls.
+          </p>
+        </article>
+        <article class="spec-card">
+          <h2>Key features</h2>
+          <ul>
+            <li>Incoming and outgoing calls, or outgoing-only mode</li>
+            <li>Multiple saved SIP accounts with quick switching</li>
+            <li>DTMF keypad, microphone mute, and speakerphone</li>
+            <li>Bluetooth headset support</li>
+            <li>Local call history</li>
+            <li>English, Ukrainian, and Russian languages</li>
+            <li>Automatic system-language selection or manual language choice</li>
+          </ul>
+        </article>
+        <article class="spec-card">
+          <h2>Local-first design</h2>
+          <p>
+            ArnSip has no developer-operated servers, advertising, analytics,
+            trackers, or telemetry. SIP credentials and call history remain on
+            your device. Network communication with your configured SIP provider
+            is used only as required for registration and calls.
+          </p>
+        </article>
+        <article class="spec-card">
+          <h2>Important note</h2>
+          <p>
+            Using the same SIP login on multiple devices may result in unstable
+            incoming-call delivery. Simultaneous ringing depends on your SIP
+            provider or PBX configuration. For reliable operation on several
+            devices, use separate SIP extensions or a provider-supported ring group.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Arn1ko Studio.</p>
+      <a href="index.html">Back to home</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
